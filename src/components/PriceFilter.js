@@ -9,7 +9,6 @@ class PriceFilter extends Component {
     const max = Math.max(...pricies);
     return [min, max];
   }
-
   render() {
     return (
       <form>

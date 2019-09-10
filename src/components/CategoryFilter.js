@@ -10,15 +10,13 @@ class CategoryFilter extends Component {
       if (!categories.includes(category.category))
         categories.push(category.category);
     });
-    console.log(categories);
-
     return categories;
   };
   render() {
     const categories = this.filterCategories();
     return (
       <div>
-        
+
         {categories.map(e => (
           <label key={e}>
             <input
@@ -26,7 +24,7 @@ class CategoryFilter extends Component {
               type="radio"
               name="category"
               value={e}
-              checked={e === this.props.category }
+              checked={e === this.props.category}
               onChange={this.props.handleCategory}
             />
             &nbsp;
