@@ -1,12 +1,20 @@
 import React, { Component } from "react";
+import dishes from "../data";
 
 class PriceFilter extends Component {
   // state = { min: 0, max: 30 };
+  minAndMax = () => {
+    const pricies = dishes.map(item => item.price)
+    const min = Math.min(...pricies);
+    const max = Math.max(...pricies);
+    return [min, max];
+  }
+
   render() {
     return (
       <form>
         <fieldset>
-          <legend>choose max and min price</legend>
+          <legend>choose price</legend>
           <div>
             <label>
               max
@@ -14,7 +22,8 @@ class PriceFilter extends Component {
                 type="range"
                 id="max"
                 name="max"
-                max="30"
+                max={this.minAndMax()[1]}
+                min={this.minAndMax()[0]}
                 step=".1"
                 onChange={this.props.selectMax}
               />
@@ -27,8 +36,8 @@ class PriceFilter extends Component {
                 type="range"
                 id="min"
                 name="min"
-                min="0"
-                max="30"
+                min={this.minAndMax()[0]}
+                max={this.minAndMax()[1]}
                 step=".1"
                 onChange={this.props.selectMin}
               />
