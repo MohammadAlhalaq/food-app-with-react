@@ -20,7 +20,7 @@ export default (props) => {
           <li key={dish.id} className="card">
             <h4>{dish.name}</h4>
             <p>{dish.description}</p>
-            <span>${dish.price}</span>
+            <span>${dish.price.toFixed(2)}</span>
           </li>
         ))}
     </ul>
