@@ -17,10 +17,10 @@ import CategoryFilter from "./components/CategoryFilter";
 class App extends React.Component {
   state = {
     min: 0,
-    max: 30,
+    max: 0,
     category: "all"
   };
-
+  
   selectMax = e => {
     this.setState({ max: e.target.value });
   };
@@ -32,6 +32,8 @@ class App extends React.Component {
   };
 
   render() {
+   
+    
     return (
       <main>
         <section className="filters">
