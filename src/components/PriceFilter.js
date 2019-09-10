@@ -14,7 +14,7 @@ class PriceFilter extends Component {
     return (
       <form>
         <fieldset>
-          <legend>choose max and min price</legend>
+          <legend>choose price</legend>
           <div>
             <label>
               max

@@ -6,8 +6,8 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial,
     sans-serif;
-  color: hsl(220, 10%, 20%);
-  background-color: hsl(220, 10%, 98%);
+  color: hsl(281, 46%, 12%);
+  background-color: hsl(240, 9%, 53%);
 }
 
 ul {
@@ -23,7 +23,7 @@ main {
 
 .filters {
   padding: 2rem;
-  background-color: hsl(220, 20%, 90%);
+  background-color: hsl(221, 35%, 75%);
 }
 
 h1 {
@@ -44,9 +44,10 @@ h1::after {
 }
 
 fieldset {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 2.5rem;
   border: 0.25rem solid hsl(200, 10%, 98%);
+  border-radius: 0.25rem;
 }
 
 legend {
@@ -62,8 +63,15 @@ label + label {
 }
 
 input {
+  margin-top: 1rem;
+  padding: .7rem;
   margin-left: 0.5rem;
+  border-radius: 0.25rem;
   vertical-align: middle;
+}
+input[type="text"]{
+  width:100%;
+  margin-left: 0;
 }
 
 .dishes {
@@ -86,5 +94,5 @@ input {
   box-shadow: 0 2px 6px hsla(220, 10%, 30%, 0.2),
     0 8px 16px hsla(220, 10%, 30%, 0.2);
   padding: 1rem;
-  background-color: #fff;
+  background-color: rgb(223, 206, 206);
 }

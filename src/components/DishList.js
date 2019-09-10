@@ -6,11 +6,15 @@ export default (props) => {
       <ul className="grid">
         {dishes
           .filter(
-            dish =>
-              dish.price >= props.min &&
-              dish.price <= props.max &&
-              (props.category === dish.category ||
-                props.category === "all")
+            dish =>{
+              const price =dish.price >= props.min &&
+              dish.price <= props.max;
+              const category = props.category === dish.category ||
+              props.category === "all";
+              const title = dish.name.includes(props.title);
+              return props.title===""?(price && category): title && category && price;
+            }
+              
           )
           .map(dish => (
             <li key={dish.id} className="card">
